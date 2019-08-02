@@ -1,0 +1,17 @@
+filebeat.prospectors:
+- type: log
+  paths:
+  - '/var/log/nginx/*.log'
+  json.keys_under_root: true
+  json.add_error_key: true
+  json.message_key: log
+
+output.elasticsearch:
+  hosts: ["http://192.168.212.2:9200"]
+  index: "test"
+setup.template.name: "test"
+setup.template.pattern: "test"
+
+#----------------------------- Logstash output --------------------------------
+#output.logstash:
+#  hosts: ["192.168.212.2:5044"]
