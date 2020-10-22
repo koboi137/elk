@@ -19,7 +19,7 @@ services:
     build:
       context: logstash/
       args:
-        ELK_VERSION: 7.2.1
+        ELK_VERSION: 7.9.2
     volumes:
       - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
       - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
@@ -38,7 +38,7 @@ services:
     build:
       context: kibana/
       args:
-        ELK_VERSION: 7.2.1
+        ELK_VERSION: 7.9.2
     volumes:
       - ./kibana/config/:/usr/share/kibana/config:ro
     ports:

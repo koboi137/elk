@@ -1,7 +1,7 @@
 #ARG ELK_VERSION
 
 # https://github.com/elastic/kibana-docker
-FROM docker.elastic.co/kibana/kibana-oss:7.2.1
+FROM docker.elastic.co/kibana/kibana-oss:7.9.2
 
 # Add your kibana plugins setup here
 # Example: RUN kibana-plugin install <name|url>
